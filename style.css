@@ -1,0 +1,364 @@
+body{
+    margin : 0px;
+    background-color:rgb(212, 212, 204);
+    height:780px;
+    width:100%;
+
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: dos;
+    src: url('./font/DOSGothic.ttf');
+}
+.text{
+    font-family: dos;
+}
+
+.shadow-design{
+    background-color: rgb(196, 195, 190);
+    box-shadow: 2px 2px rgb(53, 52, 51),
+    inset 3px 3px white,
+    inset 1.5px 1.5px rgb(196, 195, 190);
+    
+    border:0;
+    border-radius: 1px;
+}
+.popup-shadow{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.52);
+    width: 100%;
+    height: 100vh;
+    display: none
+}
+
+.mask {
+    display: none;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#000;
+    opacity:0.3; 
+    filter:alpha opacity(30);
+    z-index: 1;
+}
+
+section:first-child{
+    margin: 3px;
+    height:300px;
+}
+
+section:nth-child(2){
+    position:relative;
+    height:350px;
+    margin:10px;
+    background-color:rgb(0, 0, 121);
+}
+
+.header-container{
+    display:flex;
+    height: 40px;
+    background-color: rgb(0, 0, 121);
+}
+
+#title{
+    display:inline-block;
+    position:relative;
+    margin: auto 0px;
+    padding-left: 15px;
+    color: white;
+    font-size: 25px;
+}
+.header-button-container{
+    margin-left: auto;
+    position: relative;
+    margin-right: 5px;
+    top: 25%;
+}
+.header-button{
+    display:inline;
+    text-align: center;
+    font-size: 28px;
+    margin:auto 1px;
+    right:0%;
+    width:25px;
+    height:25px;
+}
+
+#description{
+    font-size: 36px;
+    text-align: center;
+}
+#only-english{
+    text-align: center;
+    color: rgb(86, 86, 75);
+    margin-top:30px;
+    font-size:30px;
+}
+
+.popup-body{
+    height:80%;
+    padding-top: 10px;
+    
+    text-align: center;
+}
+
+.popup-body:nth-child(1) {
+    font-size:30px;
+}
+
+input{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+   
+    height: 20%;
+    width: 800px;
+
+    border:none;
+    border-radius: 1px;
+    
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px rgb(117, 116, 113);
+}
+
+#keyboard-container{
+    position:absolute;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%);
+    height:90%;
+    width:52%;
+    padding:10px;
+
+}
+
+#keyboard-right-container{
+    position:absolute;
+    left: 100%; 
+    right: -40%;
+    top: 50%; 
+    transform: translate(-50%, -50%);
+}
+.popup-container{
+    position:absolute;
+    display : none;
+    left:50%;
+    top:50%;
+    width:60%;
+    margin-left:-30%;
+    height:400px;
+    margin-top: -200px;
+    z-index:1000;
+}
+#view-code-button{
+    width: 250px;
+    height: 90px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#view-code-manual{
+    margin-left:10px;
+    margin-top:10px;
+    font-size: 25px;
+}
+#encryp-container{
+    height: 500px;
+    margin-top: -250px;
+}
+#encryption{
+    margin-top: 20px;
+    font-size: 50px;
+    
+}
+#send-btn{ 
+    display:block;
+    margin:auto;
+    margin-top: 20px;
+    width: 120px;   
+    height: 40px;
+
+    font-size: 28px;
+}
+
+button:hover{
+    background-color: rgb(164, 163, 157);
+}
+
+button:active{
+    background-color: rgb(126, 124, 118);
+    box-shadow: 2px 2px rgb(53, 52, 51),
+    inset 3px 3px rgb(53, 52, 51),
+    inset 1.5px 1.5px rgb(196, 195, 190);
+}
+
+table{
+    position:absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -40%);
+
+    width:100%;
+    height:40%;
+    font-size: 30px;
+    text-align: center;
+}
+table, th, td {
+    border: 4px solid black;
+    border-collapse: collapse;
+    border-style : outset;
+}
+
+.decryp-code{
+    color:rgb(111, 110, 100);
+}
+
+#install-btn{
+
+    display:none;
+    position:absolute;
+    z-index: 2;
+    width:50px;
+    height:50px;
+    transform: translate(-50%, -50%);
+
+    margin-top:3px;
+    left:50%;
+    top:90%;
+    font-size:24px;
+}
+
+footer{
+    height: 300px;
+    background-color: black;
+    bottom:0%;
+}
+input:focus {outline: none;}
+
+#footer-text{
+    color:white;
+    font-size: 20px;
+    text-align: center;
+    display: inline;
+    position:absolute;
+}
+
+.keyboard-line{
+    display:flex;
+    justify-content: center;
+}
+#keyboard-line1{
+       
+    height:25%;
+}
+#keyboard-line2{
+    height:25%;
+}
+#keyboard-line3{
+    
+    height:25%;
+}
+#keyboard-line4{
+
+    height:25%;
+}
+.key{
+    width: 75px;
+    height:100px;
+    background-size: auto 80px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    flex: inline;
+    
+    image-rendering: pixelated;
+
+}
+
+#key-Q{
+    background-image : url(./asset/Q.png);
+}
+#key-W{
+    background-image : url(./asset/W.png);
+}
+#key-E{
+    background-image : url(./asset/E.png);
+}
+#key-R{
+    background-image : url(./asset/R.png);
+}
+#key-T{
+    background-image : url(./asset/T.png);
+}
+#key-Y{
+    background-image : url(./asset/Y.png);
+}
+#key-U{
+    background-image : url(./asset/U.png);
+}
+#key-I{
+    background-image : url(./asset/I.png);
+}
+#key-O{
+    background-image : url(./asset/O.png);
+}
+#key-P{
+    background-image : url(./asset/P.png);
+}
+#key-A{
+    background-image : url(./asset/A.png);
+}
+#key-S{
+    background-image : url(./asset/S.png);
+}
+#key-D{
+    background-image : url(./asset/D.png);
+}
+#key-F{
+    background-image : url(./asset/F.png);
+}
+#key-G{
+    background-image : url(./asset/G.png);
+}
+#key-H{
+    background-image : url(./asset/H.png);
+}
+#key-J{
+    background-image : url(./asset/J.png);
+}
+#key-K{
+    background-image : url(./asset/K.png);
+}
+#key-L{
+    background-image : url(./asset/L.png);
+}
+#key-Z{
+    background-image : url(./asset/Z.png);
+}
+#key-X{
+    background-image : url(./asset/X.png);
+}
+#key-C{
+    background-image : url(./asset/C.png);
+}
+#key-V{
+    background-image : url(./asset/V.png);
+}
+#key-B{
+    background-image : url(./asset/B.png);
+}
+#key-N{
+    background-image : url(./asset/N.png);
+}
+#key-M{
+    background-image : url(./asset/M.png);
+}
+#key-SPACEBAR{
+    background-image : url(./asset/SPACE.png);
+    width: 373px;
+}

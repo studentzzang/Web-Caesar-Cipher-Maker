@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciphertext Maker</title>
+    <link rel="stylesheet", href="style.css">
+
+</head>
+
+<body>
+    <section class="shadow-design">
+        <div class="shadow-design header-container">
+            <div id="title" class="text">My Program - Ciphertext Maker</div>
+            <div class="header-button-container">
+                <button class="header-button shadow-design text">-</button>
+                <button class="header-button shadow-design text">?</button>
+            </div>
+        </div>
+        <div id="input-container">
+            <div class="mask"></div>
+            <div class="popup-body">
+                <div id="description" class="text">Enter the sentence you want to encrypt and press the Done button.</div>
+                <div id="only-english" class="text">Please enter English only</div>
+                <input type="text" id="input-text" class="text"
+                oninput="englishOnly(this)" autocomplete="off" spellcheck="false">
+                <button type="button" id="send-btn" class="shadow-design text"onclick="getText()">Done</button>
+            </div> 
+        </div>
+    </section>
+    <section class="shadow-design">
+        <div id="keyboard-container" class="shadow-design">
+            <div id="keyboard-line1" class="keyboard-line">
+                <div id="key-Q" class="key"></div>
+                <div id="key-W" class="key"></div>
+                <div id="key-E" class="key"></div>
+                <div id="key-R" class="key"></div>
+                <div id="key-T" class="key"></div>
+                <div id="key-Y" class="key"></div>
+                <div id="key-U" class="key"></div>
+                <div id="key-I" class="key"></div>
+                <div id="key-O" class="key"></div>
+                <div id="key-P" class="key"></div>
+
+            </div>
+            <div class="keyboard-line"id="keyboard-line2" >
+                <div id="key-A" class="key"></div>
+                <div id="key-S" class="key"></div>
+                <div id="key-D" class="key"></div>
+                <div id="key-F" class="key"></div>
+                <div id="key-G" class="key"></div>
+                <div id="key-H" class="key"></div>
+                <div id="key-J" class="key"></div>
+                <div id="key-K" class="key"></div>
+                <div id="key-L" class="key"></div>
+
+            </div>
+            <div id="keyboard-line3" class="keyboard-line">
+                <div id="key-Z" class="key"></div>
+                <div id="key-X" class="key"></div>
+                <div id="key-C" class="key"></div>
+                <div id="key-V" class="key"></div>
+                <div id="key-B" class="key"></div>
+                <div id="key-N" class="key"></div>
+                <div id="key-M" class="key"></div>
+            </div>
+            <div id="keyboard-line4" class="keyboard-line">
+                <div id="key-SPACEBAR" class="key"></div>
+            </div>
+
+            
+        </div>
+        <div id="keyboard-right-container">
+            <button id="view-code-button" class="shadow-design text">View Code</button>
+        </div>   
+        </div>
+    </section>
+
+    <div class="mask"></div>
+    <section id="view-code-container" class="popup-container shadow-design">
+        <div class="shadow-design header-container">
+            <div id="title" class="text">My Program - Now Decryption Code</div>
+            <div class="header-button-container">
+                <button class="header-button shadow-design text">?</button>
+                <button id="view-code-close" class="header-button shadow-design text">X</button>
+            </div>
+        </div>
+        <div>
+            <div class="popup-body text">
+                <div id="view-code-manual">I'll show it especially to you...<br>
+                    This is a decryption code valid only for now.<br>
+                    It will change if you refresh the page or come back later.
+                </div>
+                <table>
+                    <tr>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                        <th>E</th>
+                        <th>F</th>
+                        <th>G</th>
+                        <th>H</th>
+                        <th>I</th>
+                        <th>J</th>
+                        <th>K</th>
+                        <th>L</th>
+                        <th>M</th>
+                    </tr>
+                    <tr class="decryp-code">
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th>N</th>
+                        <th>O</th>
+                        <th>P</th>
+                        <th>Q</th>
+                        <th>R</th>
+                        <th>S</th>
+                        <th>T</th>
+                        <th>U</th>
+                        <th>V</th>
+                        <th>W</th>
+                        <th>X</th>
+                        <th>Y</th>
+                        <th>Z</th>
+                    </tr>
+                    <tr class="decryp-code">
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div> 
+        </div>
+    </section>
+
+    <div id="encryp-container" class="popup-container shadow-design">
+        <div class="shadow-design header-container">
+            <div id="title" class="text">My Program - Now Decryption Code</div>
+            <div class="header-button-container">
+                <button class="header-button shadow-design text">?</button>
+                <button id="encryp-close-btn" class="header-button shadow-design text">X</button>
+            </div>
+        </div>
+        <div>
+            <div class="popup-body text">
+                <div>this is encryption for you.</div>
+                <div id="encryption">-</div>
+                <table>
+                    <tr>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                        <th>E</th>
+                        <th>F</th>
+                        <th>G</th>
+                        <th>H</th>
+                        <th>I</th>
+                        <th>J</th>
+                        <th>K</th>
+                        <th>L</th>
+                        <th>M</th>
+                    </tr>
+                    <tr class="decryp-code">
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th>N</th>
+                        <th>O</th>
+                        <th>P</th>
+                        <th>Q</th>
+                        <th>R</th>
+                        <th>S</th>
+                        <th>T</th>
+                        <th>U</th>
+                        <th>V</th>
+                        <th>W</th>
+                        <th>X</th>
+                        <th>Y</th>
+                        <th>Z</th>
+                    </tr>
+                    <tr class="decryp-code">
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div> 
+        </div>
+    </div>
+    <button type="button" id="install-btn" class="shadow-design">↓</button>
+
+    <footer>
+        <p class="text" id="footer-text">hi</div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+</body>
+</html>
